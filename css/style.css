@@ -3,9 +3,11 @@ body {
   color: #ffffff;
   font-family: "Roboto", sans-serif;
 }
-
+img {
+  max-width: 100%;
+}
 .container {
-  max-width: 1140px;
+  width: 90%;
   margin: auto;
 }
 .header {
@@ -20,14 +22,14 @@ body {
   margin-right: 50px;
 }
 
-.film-menu {
+.nav-menu {
   margin: 0;
   padding: 0;
   list-style-type: none;
   display: flex;
 }
 
-.film-menu-link {
+.nav-menu-link {
   text-decoration: none;
   font-size: 14px;
   line-height: 16px;
@@ -35,18 +37,11 @@ body {
   margin-right: 30px;
 }
 
-.film-menu-link {
-  font-size: 16px;
-  line-height: 140%;
-  color: rgba(255, 255, 255, 0.8);
-  margin-top: 40px;
-}
-
 .film-date {
   font-size: 24px;
   line-height: 28px;
   color: rgba(255, 255, 255, 0.8);
-  margin-bottom: 38px;
+  margin-bottom: 2%;
   display: block;
 }
 
@@ -55,10 +50,11 @@ body {
   line-height: 140%;
   color: rgba(255, 255, 255, 0.8);
   max-width: 423px;
-  margin-top: 40px;
-  margin-bottom: 70px;
+  margin-top: 3%;
 }
-
+.button-group {
+  margin-top: 5%;
+}
 .button {
   display: inline-block;
   padding: 15px 30px;
@@ -94,9 +90,11 @@ body {
   position: absolute;
   top: 0;
   right: 0;
+  max-width: 728px;
+  width: 50%;
 }
 .blood {
-  background: url("../img/blood.png") no-repeat top right,
+  background: url("../img/blood.png") no-repeat top right / 70%,
     #14131a url("../img/background.jpg") no-repeat center center / 100%;
 }
 .primary-bg {
@@ -116,6 +114,9 @@ body {
   color: rgba(255, 255, 255, 0.8);
   margin-bottom: 21px;
   margin-top: 0;
+}
+.film-logo {
+  width: 70%;
 }
 .content-text {
   font-size: 16px;
@@ -152,14 +153,13 @@ body {
   width: 356px;
   height: 205px;
   background: url("../img/trailer.jpg") no-repeat center / contain;
-  width: 356px;
-  height: 205px;
   border-radius: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
   border: none;
   margin-top: 33px;
+  width: 100%;
 }
 .content .play {
   border-radius: 50%;
@@ -174,7 +174,7 @@ body {
 
 .poster-wrapper {
   display: flex;
-  align-items: start;
+  align-items: flex-start;
 }
 .poster {
   width: 362px;
@@ -187,4 +187,123 @@ body {
 .poster-wrapper .list {
   margin: 0;
   margin-bottom: 20px;
+}
+.menu-button {
+  display: none;
+}
+.menu-close {
+  display: none;
+}
+@media (max-width: 768px) {
+  .blood {
+    background: #14131a;
+  }
+  .venom {
+    top: 10%;
+  }
+}
+@media (max-width: 576px) {
+  .nav-menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    transform: translateX(100%);
+    transition: transform 0.2s;
+  }
+  .nav-menu-item {
+    margin-bottom: 2%;
+    margin-top: 2%;
+    margin-right: 0;
+  }
+  .menu-close {
+    position: fixed;
+    opacity: 0;
+    right: 25px;
+    top: 65px;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+    border: none;
+    background-color: #ffffff;
+    cursor: pointer;
+    transform: translateX(300%);
+    transition: transform 0.2s;
+    transition-delay: 0.4s;
+  }
+  .is-active {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  .menu-close-text {
+    margin-right: 10px;
+  }
+  .nav-menu-link {
+    color: #14131a;
+  }
+  .nav {
+    margin-left: auto;
+  }
+  .menu-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: none;
+    background-color: #14131a;
+    cursor: pointer;
+    color: #ffffff;
+  }
+  .menu-button-text {
+    margin-right: 10px;
+  }
+  .button-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .film {
+    text-align: center;
+  }
+  .poster-wrapper {
+    flex-direction: column;
+  }
+  .poster {
+    padding-bottom: 4%;
+  }
+  .content .trailer {
+    max-width: 350px;
+    width: 100%;
+  }
+  .poster {
+    max-width: 350px;
+    margin-right: 0;
+    width: 100%;
+  }
+  .column-2 {
+    column-count: 1;
+  }
+}
+@media (max-width: 1024px) {
+  .content {
+    flex-direction: column;
+    padding-bottom: 5%;
+  }
+  .col {
+    margin-bottom: 5%;
+  }
+  .header {
+    padding-bottom: 10%;
+  }
+  .film {
+    margin-top: 20%;
+  }
 }

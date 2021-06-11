@@ -16,34 +16,46 @@
       <a href="/" class="logo">
         <img width="46" height="71" class="film-logo-img" src="img/logo.png" alt="logo: Venom">
       </a>
-      <nav class="film-nav">
-        <ul class="film-menu">
-          <li class="film-menu-item"><a class="film-menu-link" href="about.html">о фильме</a></li>
-          <li class="film-menu-item"><a class="film-menu-link" href="#">трейлер</a></li>
-          <li class="film-menu-item"><a class="film-menu-link" href="#">актеры</a></li>
-          <li class="film-menu-item"><a class="film-menu-link" href="#">премьера</a></li>
+      <nav class="nav">
+        <button class="menu-button">
+          <span class="menu-button-text">меню</span>
+          <img src="img/burger.svg" alt="icon: menu burger" class="menu-button-icon">
+        </button>
+        <button class="menu-close">
+          <span class="menu-close-text">закрыть</span>
+          <img class="menu-close-icon" src="img/arrow.svg" alt="icon: arrow">
+        </button>
+        <ul class="nav-menu">
+          <li class="nav-menu-item"><a class="nav-menu-link" href="about.html">о фильме</a></li>
+          <li class="nav-menu-item"><a class="nav-menu-link" href="#">трейлер</a></li>
+          <li class="nav-menu-item"><a class="nav-menu-link" href="#">актеры</a></li>
+          <li class="nav-menu-item"><a class="nav-menu-link" href="#">премьера</a></li>
         </ul>
       </nav>
     </header>
     <div class="film">
       <span class="film-date">16 сентября 2021</span>
-      <img src="img/venom-2.png" alt="logo: venom 2" class="film-logo">
+      <img class="film-logo" src="img/venom-2.png" alt="logo: venom 2" class="film-logo">
       <p class="film-description">
         В настырном журналисте по-прежнему живет симбиот. Том Харди в образе обаятельного суперзлодея из комиксов Marvel.
       </p>
     </div>
     <!-- /.film -->
       <div class="button-group">
-        <button class="button button-primary">
+        <a data-fancybox href="https://www.youtube.com/watch?v=Othd8W8o3t0&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0" class="button button-primary">
           <img class="button-icon" width="15" src="img/play.png" alt="icon: play">
           <span class="button-text" >смотреть трейлер</span>
-        </button>
+        </a>
         <a href="#" class="button button-link">
           <img class="button-icon" width="15" src="img/ticket.png" alt="icon: ticket">
           <span class="button-text">билеты на премьеру</span>
         </a>
       </div>
   </div>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
   <img class="venom" src="img/venom.png" alt="photo: venom">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
